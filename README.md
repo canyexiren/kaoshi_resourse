@@ -4,9 +4,9 @@
 > ⭐ 如果这个项目对你有帮助，欢迎 Star 支持！
 > 🤝 也欢迎提交 PR 一起丰富资源！
 
-[![GitHub stars](https://img.shields.io/github/stars/你的用户名/kaoshi_resourse?style=social)](https://github.com/你的用户名/kaoshi_resourse/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/你的用户名/kaoshi_resourse?style=social)](https://github.com/你的用户名/kaoshi_resourse/network/members)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/你的用户名/kaoshi_resourse/pulls)
+[![GitHub stars](https://img.shields.io/github/stars/canyexiren/kaoshi_resourse?style=social)](https://github.com/canyexiren/kaoshi_resourse/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/canyexiren/kaoshi_resourse?style=social)](https://github.com/canyexiren/kaoshi_resourse/network/members)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/canyexiren/kaoshi_resourse/pulls)
 ---
 
 ## 📋 目录
@@ -461,5 +461,5 @@
 
 <p align="center">
   <b>Made with ❤️ for all 考公考编人</b><br>
-  <a href="https://github.com/你的用户名/kaoshi_resourse">GitHub 仓库</a>
+  <a href="https://github.com/canyexiren/kaoshi_resourse">GitHub 仓库</a>
 </p>
