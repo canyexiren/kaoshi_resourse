@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,6 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif; background: #f0f2f5; color: #333; line-height: 1.6; }
-        
         .hero {
             background: linear-gradient(135deg, #1a73e8 0%, #1557b0 50%, #0d47a1 100%);
             color: white;
@@ -18,22 +17,20 @@
         .hero p { font-size: 1.2em; opacity: 0.9; max-width: 600px; margin: 0 auto; }
         .hero .badge { margin-top: 24px; }
         .hero .badge img { height: 24px; margin: 0 4px; }
-
-        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
-
+        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
         .nav-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
             margin: -40px auto 40px;
             padding: 0 20px;
-            max-width: 1000px;
+            max-width: 1100px;
             position: relative;
         }
         .nav-card {
             background: white;
             border-radius: 12px;
-            padding: 28px;
+            padding: 24px 20px;
             box-shadow: 0 4px 16px rgba(0,0,0,0.08);
             text-decoration: none;
             color: #333;
@@ -41,14 +38,12 @@
             display: block;
         }
         .nav-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
-        .nav-card .icon { font-size: 2.5em; margin-bottom: 12px; }
-        .nav-card h3 { font-size: 1.2em; margin-bottom: 8px; color: #1a73e8; }
-        .nav-card p { font-size: 0.9em; color: #666; }
-
+        .nav-card .icon { font-size: 2em; margin-bottom: 8px; }
+        .nav-card h3 { font-size: 1.1em; margin-bottom: 6px; color: #1a73e8; }
+        .nav-card p { font-size: 0.85em; color: #666; }
         section { margin-bottom: 40px; }
-        section h2 { font-size: 1.6em; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid #1a73e8; display: inline-block; }
-
-        .resource-table {
+        section h2 { font-size: 1.5em; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 3px solid #1a73e8; display: inline-block; }
+        .res-table {
             width: 100%;
             border-collapse: collapse;
             background: white;
@@ -56,20 +51,20 @@
             overflow: hidden;
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
-        .resource-table th {
+        .res-table th {
             background: #1a73e8;
             color: white;
-            padding: 12px 16px;
+            padding: 10px 14px;
             text-align: left;
             font-weight: 500;
         }
-        .resource-table td {
-            padding: 12px 16px;
+        .res-table td {
+            padding: 10px 14px;
             border-bottom: 1px solid #eee;
         }
-        .resource-table tr:hover { background: #f5f8ff; }
-        .resource-table a { color: #1a73e8; text-decoration: none; }
-        .resource-table a:hover { text-decoration: underline; }
+        .res-table tr:hover { background: #f5f8ff; }
+        .res-table a { color: #1a73e8; text-decoration: none; }
+        .res-table a:hover { text-decoration: underline; }
         .tag {
             display: inline-block;
             padding: 2px 10px;
@@ -77,26 +72,47 @@
             font-size: 0.8em;
             font-weight: 500;
         }
-        .tag-free { background: #e8f5e9; color: #2e7d32; }
-        .tag-paid { background: #fff3e0; color: #e65100; }
-        .tag-hot { background: #fce4ec; color: #c62828; }
-
+        .tag-red { background: #fce4ec; color: #c62828; }
+        .tag-blue { background: #e3f2fd; color: #1565c0; }
+        .tag-green { background: #e8f5e9; color: #2e7d32; }
+        .tag-orange { background: #fff3e0; color: #e65100; }
         .quick-links {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 10px;
         }
         .quick-link {
             background: white;
-            padding: 10px 20px;
+            padding: 8px 18px;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
             text-decoration: none;
             color: #1a73e8;
+            font-size: 0.9em;
             transition: background 0.2s;
         }
         .quick-link:hover { background: #e8f0fe; }
-
+        .netdisk-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 16px;
+            padding: 30px;
+            color: white;
+            margin-bottom: 40px;
+        }
+        .netdisk-section h2 { border-bottom-color: rgba(255,255,255,0.5); }
+        .netdisk-section .res-table { background: rgba(255,255,255,0.95); }
+        .netdisk-section .res-table th { background: #5a67d8; }
+        .btn-save {
+            display: inline-block;
+            background: #48bb78;
+            color: white !important;
+            padding: 4px 14px;
+            border-radius: 6px;
+            font-size: 0.85em;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .btn-save:hover { background: #38a169 !important; text-decoration: none !important; }
         footer {
             text-align: center;
             padding: 40px 20px;
@@ -104,7 +120,6 @@
             font-size: 0.9em;
         }
         footer a { color: #1a73e8; text-decoration: none; }
-
         @media (max-width: 600px) {
             .hero h1 { font-size: 2em; }
             .hero { padding: 50px 20px; }
@@ -114,51 +129,30 @@
 </head>
 <body>
     <div class="hero">
-        <h1>📚 考公考编资源大全</h1>
-        <p>一站式汇总公务员、事业单位、教师招聘、考研备考资源 — 助你上岸少走弯路</p>
+        <h1>\U0001f4da 考公考编资源大全</h1>
+        <p>一站式汇总公务员、事业单位、教师招聘、考研、军队文职、国企等备考资源</p>
         <div class="badge">
             <a href="https://github.com/canyexiren/kaoshi_resourse/stargazers"><img src="https://img.shields.io/github/stars/canyexiren/kaoshi_resourse?style=social" alt="stars"></a>
             <a href="https://github.com/canyexiren/kaoshi_resourse/network/members"><img src="https://img.shields.io/github/forks/canyexiren/kaoshi_resourse?style=social" alt="forks"></a>
         </div>
     </div>
-
     <div class="nav-grid">
-        <a href="#gwy" class="nav-card">
-            <div class="icon">📖</div>
-            <h3>公务员考试</h3>
-            <p>国考、省考行测+申论+面试备考资源</p>
-        </a>
-        <a href="#sydw" class="nav-card">
-            <div class="icon">🏛️</div>
-            <h3>事业单位考试</h3>
-            <p>公基、职测、综应备考资料</p>
-        </a>
-        <a href="#jszg" class="nav-card">
-            <div class="icon">👨‍🏫</div>
-            <h3>教师资格 / 教师招聘</h3>
-            <p>教资笔试面试、教招备考资源</p>
-        </a>
-        <a href="#ky" class="nav-card">
-            <div class="icon">🎓</div>
-            <h3>考研</h3>
-            <p>政治英语数学专业课全覆盖</p>
-        </a>
-        <a href="#platforms" class="nav-card">
-            <div class="icon">🌐</div>
-            <h3>刷题平台</h3>
-            <p>粉笔、华图、中公等刷题平台推荐</p>
-        </a>
-        <a href="#tools" class="nav-card">
-            <div class="icon">🛠️</div>
-            <h3>实用工具</h3>
-            <p>备考必备工具和效率APP</p>
-        </a>
+        <a href="#gwy" class="nav-card"><div class="icon">\U0001f4d6</div><h3>公务员考试</h3><p>国考、省考行测+申论+面试</p></a>
+        <a href="#sydw" class="nav-card"><div class="icon">\U0001f3db\ufe0f</div><h3>事业单位</h3><p>公基、职测、综应备考</p></a>
+        <a href="#jszg" class="nav-card"><div class="icon">\U0001f468\u200d\U0001f3eb</div><h3>教师资格/教招</h3><p>教资笔试面试、教师招聘</p></a>
+        <a href="#ky" class="nav-card"><div class="icon">\U0001f393</div><h3>考研</h3><p>政治英语数学专业课</p></a>
+        <a href="#jun" class="nav-card"><div class="icon">\U0001f9aa</div><h3>军队文职</h3><p>文职人员招录考试</p></a>
+        <a href="#guoqi" class="nav-card"><div class="icon">\u26a1</div><h3>国企招聘</h3><p>国家电网、烟草等</p></a>
+        <a href="#shegong" class="nav-card"><div class="icon">\U0001f3d8\ufe0f</div><h3>社会工作者</h3><p>社工证考试</p></a>
+        <a href="#netdisk" class="nav-card"><div class="icon">\U0001f4e5</div><h3>\U0001f4e6 网盘资源</h3><p>夸克网盘资料直通车</p></a>
+        <a href="#platforms" class="nav-card"><div class="icon">\U0001f310</div><h3>刷题平台</h3><p>粉笔、华图、中公推荐</p></a>
+        <a href="#tools" class="nav-card"><div class="icon">\U0001f6e0\ufe0f</div><h3>实用工具</h3><p>备考必备APP</p></a>
     </div>
-
     <div class="container">
+
         <section id="gwy">
-            <h2>📖 公务员考试</h2>
-            <table class="resource-table">
+            <h2>\U0001f4d6 公务员考试</h2>
+            <table class="res-table">
                 <thead><tr><th>模块</th><th>名师推荐</th><th>推荐教材</th></tr></thead>
                 <tbody>
                     <tr><td>言语理解</td><td>欧阳、顾斐</td><td>行测的思维</td></tr>
@@ -167,13 +161,16 @@
                     <tr><td>资料分析</td><td>花生十三</td><td>行测5000题</td></tr>
                     <tr><td>常识判断</td><td>李梦娇、王鹏</td><td>行测的思维</td></tr>
                     <tr><td>申论</td><td>李梦圆、张小龙</td><td>申论的规矩</td></tr>
+                    <tr><td>面试</td><td>袁东、王晓峰</td><td>面试的经验</td></tr>
+                    <tr><td>公安专项</td><td>公安专业团队</td><td>公安专业知识教材</td></tr>
+                    <tr><td>遴选</td><td>遴选名师</td><td>遴选案例分析教材</td></tr>
                 </tbody>
             </table>
         </section>
 
         <section id="sydw">
-            <h2>🏛️ 事业单位考试</h2>
-            <table class="resource-table">
+            <h2>\U0001f3db\ufe0f 事业单位考试</h2>
+            <table class="res-table">
                 <thead><tr><th>科目</th><th>名师推荐</th><th>推荐教材</th></tr></thead>
                 <tbody>
                     <tr><td>公共基础知识</td><td>李梦娇（口诀一姐）</td><td>粉笔公基教材</td></tr>
@@ -185,8 +182,8 @@
         </section>
 
         <section id="jszg">
-            <h2>👨‍🏫 教师招聘</h2>
-            <table class="resource-table">
+            <h2>\U0001f468\u200d\U0001f3eb 教师招聘</h2>
+            <table class="res-table">
                 <thead><tr><th>考试</th><th>推荐机构</th><th>特点</th></tr></thead>
                 <tbody>
                     <tr><td>教师资格证</td><td>中公教育</td><td>教材系统全面</td></tr>
@@ -197,8 +194,8 @@
         </section>
 
         <section id="ky">
-            <h2>🎓 考研</h2>
-            <table class="resource-table">
+            <h2>\U0001f393 考研</h2>
+            <table class="res-table">
                 <thead><tr><th>科目</th><th>名师推荐</th><th>推荐资料</th></tr></thead>
                 <tbody>
                     <tr><td>考研政治</td><td>肖秀荣、徐涛、腿姐</td><td>肖四肖八、核心考案</td></tr>
@@ -208,37 +205,101 @@
             </table>
         </section>
 
+        <section id="jun">
+            <h2>\U0001f9aa 军队文职</h2>
+            <table class="res-table">
+                <thead><tr><th>科目</th><th>说明</th><th>备考建议</th></tr></thead>
+                <tbody>
+                    <tr><td>公共科目</td><td>公基+行测</td><td>参考公务员备考</td></tr>
+                    <tr><td>专业科目</td><td>13类44个专业</td><td>按岗位要求复习</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="guoqi">
+            <h2>\u26a1 国企招聘</h2>
+            <table class="res-table">
+                <thead><tr><th>企业</th><th>考试内容</th><th>招聘时间</th></tr></thead>
+                <tbody>
+                    <tr><td>国家电网</td><td>专业知识+行测+能源战略</td><td>11月、3月</td></tr>
+                    <tr><td>烟草系统</td><td>行测+申论+专业知识</td><td>各地不同</td></tr>
+                    <tr><td>三大运营商</td><td>行测+企业文化</td><td>9-10月</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="shegong">
+            <h2>\U0001f3d8\ufe0f 社会工作者</h2>
+            <table class="res-table">
+                <thead><tr><th>级别</th><th>科目</th><th>考试时间</th></tr></thead>
+                <tbody>
+                    <tr><td>初级（助理社工师）</td><td>综合能力+实务</td><td>每年6月</td></tr>
+                    <tr><td>中级（社工师）</td><td>综合能力+实务+法规政策</td><td>每年6月</td></tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="netdisk">
+            <div class="netdisk-section">
+                <h2>\U0001f4e5 \U0001f4e6 网盘资源直通车</h2>
+                <p>夸克网盘资源汇总，点击按钮直接保存到你的网盘</p>
+                <p style="font-size:0.85em; opacity:0.8; margin-bottom:16px;">\u26a0\ufe0f 链接可能随时失效，如遇失效欢迎提 Issue</p>
+                <table class="res-table">
+                    <thead><tr><th>资源名称</th><th>类别</th><th>保存</th></tr></thead>
+                    <tbody>
+                        <tr><td>\U0001f4f0 时政+政治理论合集</td><td>时政/申论素材</td><td><a class="btn-save" href="https://pan.quark.cn/s/222a2529bb37" target="_blank">\U0001f4be 保存</a></td></tr>
+                        <tr><td>\U0001f4dd 公考刷题合集</td><td>行测刷题</td><td><a class="btn-save" href="https://pan.quark.cn/s/2f653e589072" target="_blank">\U0001f4be 保存</a></td></tr>
+                        <tr><td>\U0001f9e0 大神复盘</td><td>经验分享</td><td><a class="btn-save" href="https://pan.quark.cn/s/c970adaf225e" target="_blank">\U0001f4be 保存</a></td></tr>
+                        <tr><td>\U0001f3ac 26公考名师课合集</td><td>网课资源</td><td><a class="btn-save" href="https://pan.quark.cn/s/44eadc0fef0a" target="_blank">\U0001f4be 保存</a></td></tr>
+                        <tr><td>\u270f\ufe0f 申论合集</td><td>申论备考</td><td><a class="btn-save" href="https://pan.quark.cn/s/0b85f99a3d2a" target="_blank">\U0001f4be 保存</a></td></tr>
+                        <tr><td>\U0001f4da 25年公考资料</td><td>公务员考试</td><td><a class="btn-save" href="https://pan.quark.cn/s/66dc399aa063" target="_blank">\U0001f4be 保存</a></td></tr>
+                        <tr><td>\U0001f3a4 公考面试合集</td><td>面试备考</td><td><a class="btn-save" href="https://pan.quark.cn/s/1fad80b16f82" target="_blank">\U0001f4be 保存</a></td></tr>
+                        <tr><td>\U0001f3db\ufe0f 事业单位资料</td><td>事业单位</td><td><a class="btn-save" href="https://pan.quark.cn/s/a9e8c5bd066a" target="_blank">\U0001f4be 保存</a></td></tr>
+                        <tr><td>\U0001f468\u200d\U0001f3eb 教编、特岗</td><td>教师招聘</td><td><a class="btn-save" href="https://pan.quark.cn/s/1ace2e452093" target="_blank">\U0001f4be 保存</a></td></tr>
+                        <tr><td>\U0001f4d6 四六级+英语</td><td>考研/英语</td><td><a class="btn-save" href="https://pan.quark.cn/s/57a08a36be07" target="_blank">\U0001f4be 保存</a></td></tr>
+                        <tr><td>\U0001f3d8\ufe0f 社工资料包</td><td>社会工作者</td><td><a class="btn-save" href="https://pan.quark.cn/s/2ae4516da5da" target="_blank">\U0001f4be 保存</a></td></tr>
+                        <tr><td>\U0001f393 教资资料合集</td><td>教师资格</td><td><a class="btn-save" href="https://pan.quark.cn/s/b365bf98e610" target="_blank">\U0001f4be 保存</a></td></tr>
+                        <tr><td>\U0001f46e 公an专项资料</td><td>公安专项</td><td><a class="btn-save" href="https://pan.quark.cn/s/8d89bef57054" target="_blank">\U0001f4be 保存</a></td></tr>
+                        <tr><td>\U0001f33e 三支一扶</td><td>三支一扶</td><td><a class="btn-save" href="https://pan.quark.cn/s/0c3abc882e6d" target="_blank">\U0001f4be 保存</a></td></tr>
+                        <tr><td>\U0001f9aa jun队文职</td><td>军队文职</td><td><a class="btn-save" href="https://pan.quark.cn/s/482e7ddff2ed" target="_blank">\U0001f4be 保存</a></td></tr>
+                        <tr><td>\U0001f3af 遴选</td><td>公务员遴选</td><td><a class="btn-save" href="https://pan.quark.cn/s/696b27f54f65" target="_blank">\U0001f4be 保存</a></td></tr>
+                        <tr><td>\u26a1 国家电网</td><td>国企招聘</td><td><a class="btn-save" href="https://pan.quark.cn/s/3724b7474f1a" target="_blank">\U0001f4be 保存</a></td></tr>
+                        <tr><td>\U0001f6ac 烟草资料合集</td><td>国企招聘</td><td><a class="btn-save" href="https://pan.quark.cn/s/731edeff41d4" target="_blank">\U0001f4be 保存</a></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
         <section id="platforms">
-            <h2>🌐 推荐刷题平台</h2>
-            <table class="resource-table">
+            <h2>\U0001f310 推荐刷题平台</h2>
+            <table class="res-table">
                 <thead><tr><th>平台</th><th>适用考试</th><th>特点</th><th>费用</th></tr></thead>
                 <tbody>
-                    <tr><td><a href="https://fenbi.com">粉笔</a></td><td>公务员/事业单位</td><td>题库最大，模考系统好</td><td><span class="tag tag-free">部分免费</span></td></tr>
-                    <tr><td><a href="https://v.huatu.com">华图在线</a></td><td>公务员/事业单位</td><td>真题多，解析详细</td><td><span class="tag tag-free">部分免费</span></td></tr>
-                    <tr><td><a href="https://www.offcn.com">中公题库</a></td><td>公务员/事业单位</td><td>多种刷题模式</td><td><span class="tag tag-free">部分免费</span></td></tr>
-                    <tr><td><a href="https://bilibili.com">B站</a></td><td>全部</td><td>大量免费课程</td><td><span class="tag tag-free">免费</span></td></tr>
+                    <tr><td><a href="https://fenbi.com">粉笔</a></td><td>公务员/事业单位</td><td>题库最大，模考系统好</td><td><span class="tag tag-green">部分免费</span></td></tr>
+                    <tr><td><a href="https://v.huatu.com">华图在线</a></td><td>公务员/事业单位</td><td>真题多，解析详细</td><td><span class="tag tag-green">部分免费</span></td></tr>
+                    <tr><td><a href="https://www.offcn.com">中公题库</a></td><td>公务员/事业单位</td><td>多种刷题模式</td><td><span class="tag tag-green">部分免费</span></td></tr>
+                    <tr><td><a href="https://bilibili.com">B站</a></td><td>全部</td><td>大量免费课程</td><td><span class="tag tag-green">免费</span></td></tr>
                 </tbody>
             </table>
         </section>
 
         <section id="tools">
-            <h2>🛠️ 备考必备工具</h2>
+            <h2>\U0001f6e0\ufe0f 备考必备工具</h2>
             <div class="quick-links">
-                <a href="#" class="quick-link">📱 粉笔APP</a>
-                <a href="#" class="quick-link">📱 学习强国</a>
-                <a href="#" class="quick-link">📱 半月谈</a>
-                <a href="#" class="quick-link">📱 XMind</a>
-                <a href="#" class="quick-link">📱 Notion</a>
-                <a href="#" class="quick-link">📱 番茄TODO</a>
-                <a href="#" class="quick-link">📱 幕布</a>
-                <a href="#" class="quick-link">📱 百度网盘</a>
+                <a href="#" class="quick-link">\U0001f4f1 粉笔APP</a>
+                <a href="#" class="quick-link">\U0001f4f1 学习强国</a>
+                <a href="#" class="quick-link">\U0001f4f1 半月谈</a>
+                <a href="#" class="quick-link">\U0001f4f1 XMind</a>
+                <a href="#" class="quick-link">\U0001f4f1 Notion</a>
+                <a href="#" class="quick-link">\U0001f4f1 番茄TODO</a>
+                <a href="#" class="quick-link">\U0001f4f1 幕布</a>
+                <a href="#" class="quick-link">\U0001f4f1 百度网盘</a>
             </div>
         </section>
+
     </div>
 
     <footer>
-        <p>📚 考公考编资源大全 · <a href="https://github.com/canyexiren/kaoshi_resourse">GitHub 仓库</a></p>
-        <p>Made with ❤️ for all 考公考编人</p>
+        <p>\U0001f4da 考公考编资源大全 \u00b7 <a href="https://github.com/canyexiren/kaoshi_resourse">GitHub 仓库</a></p>
+        <p>Made with \u2764\ufe0f for all 考公考编人</p>
     </footer>
 </body>
 </html>
