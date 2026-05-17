@@ -433,9 +433,9 @@
 | 📖 **四六级➕英语** | 考研/英语 | [点击保存](https://pan.quark.cn/s/57a08a36be07) |
 | 🏘️ **社工资料包** | 社会工作者 | [点击保存](https://pan.quark.cn/s/2ae4516da5da) |
 | 🎓 **教资资料合集** | 教师资格 | [点击保存](https://pan.quark.cn/s/b365bf98e610) |
-| 👮 **公an专项资料** | 公安专项 | [点击保存](https://pan.quark.cn/s/8d89bef57054) |
+| 👮 **公安专项资料** | 公安专项 | [点击保存](https://pan.quark.cn/s/8d89bef57054) |
 | 🌾 **三支一扶** | 三支一扶 | [点击保存](https://pan.quark.cn/s/0c3abc882e6d) |
-| 🪖 **jun队文职** | 军队文职 | [点击保存](https://pan.quark.cn/s/482e7ddff2ed) |
+| 🪖 **军队文职** | 军队文职 | [点击保存](https://pan.quark.cn/s/482e7ddff2ed) |
 | 🎯 **遴选** | 公务员遴选 | [点击保存](https://pan.quark.cn/s/696b27f54f65) |
 | ⚡ **国家电网** | 国企招聘 | [点击保存](https://pan.quark.cn/s/3724b7474f1a) |
 | 🚬 **烟草网申笔试面试资料合集** | 国企招聘 | [点击保存](https://pan.quark.cn/s/731edeff41d4) |
